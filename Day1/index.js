@@ -108,3 +108,12 @@ switch(choice) {
     default:
         console.log("Invalid choice");
 }
+
+console.log(typeof choice, typeof a, typeof b, typeof str, typeof obj, typeof arr); // typeof operator to check the type of variables
+for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+    if(typeof element === "number") {
+        console.log(element, "is a number");
+    }
+    // console.log(element, typeof element); 
+}
