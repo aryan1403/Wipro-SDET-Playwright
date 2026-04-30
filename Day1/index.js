@@ -24,3 +24,31 @@ console.log("a == b:", a == b); // F === Strict equality (checks value and type)
 console.log("a != b:", a != b); // T
 console.log("a >= b:", a >= b); // F
 console.log("a <= b:", a <= b); // T
+
+let obj = {
+    name: "Alice",
+    age: 30,
+    city: "New York"
+}
+console.log("Object:", obj);
+console.log("Name:", obj.name);
+console.log("Age:", obj.age);
+console.log("City:", obj.city);
+
+// String str = "Aryan"; int a = 5; boolean b = true;
+let str2 = "Aryan";
+let a2 = 5;
+let b2 = true;
+
+str2 = 23;
+console.log("str2:", str2); // str2 is now a number, demonstrating dynamic typing in JavaScript`
+
+function add(a, b) {
+    return a + b;
+}
+
+console.log("Function add(5, 10):", add(5, 10)); // 15
+
+const c = 5; // final value, cannot be reassigned
+// c = 6; // This would cause an error
+console.log(c);
