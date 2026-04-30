@@ -52,3 +52,16 @@ console.log("Function add(5, 10):", add(5, 10)); // 15
 const c = 5; // final value, cannot be reassigned
 // c = 6; // This would cause an error
 console.log(c);
+
+let l = 5;
+var v = 6;
+
+{
+    let l = 10; // This l is block-scoped, different from the global l
+    var v = 20; // This v is function-scoped, it will overwrite the global v
+    console.log("Inside block, l:", l); // 10
+    console.log("Inside block, v:", v); // 20
+}
+
+console.log("Outside block, l:", l); // 5
+console.log("Outside block, v:", v); // 20
