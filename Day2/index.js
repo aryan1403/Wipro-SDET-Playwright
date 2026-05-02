@@ -94,5 +94,36 @@ console.log(colors.splice(1, 3));
 // let str = "Hello World";
 // console.log(str.slice(0, 5)); // "Hello"
 
+const prices = [10, 20, 30, 40]; // tasks: find the total of all elements
+// let s = 0;
+// for (let i = 0; i < prices.length; i++) {
+//     s += prices[i]; // s = s + prices[i]
+// }
+
+const total = prices.reduce((acc, curr) => { return acc + curr }, 0);
+// 0 + 10 = 10
+// 10 + 20 = 30
+// 30 + 30 = 60
+// 60 + 40 = 100
+console.log(total);
+// console.log("Sum:", s);
+
+const fruitBasket = ['apple', 'banana', 'cherry', 'apple', 'apple', 'banana', 'pineapple']; // apple: 3, banana: 3, cherry: 1, pineapple: 1
+const tally = fruitBasket.reduce((acc, fruit) => {
+    acc[fruit] = (acc[fruit] || 0) + 1;
+    return acc;
+}, {}); // intial value of acc is an empty object
+console.log(tally);
+// {}
+// {apple: 3, banana: 2, cherry: 1, pineapple: 1}
+
+// function b(a, c) {
+//     return a * c * 2;
+// }
+// function a(b, c) {
+//     return b(a(1, 2), c);
+// }
+
+
 
 
