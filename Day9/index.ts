@@ -92,3 +92,16 @@ names.addItems("Rohan");
 
 console.log(names.getItem(0), names.getItem(1), names.getItem(2), names.getItem(3)); // undefined for index 3
 
+interface HasLength {
+    length: number;
+}
+
+// generics with contraints | extends keyword
+function logLength<T extends HasLength>(arg: T): void { // T -> property .length --> string, arrays
+    console.log(arg.length);
+}
+
+logLength("Aaryan"); // string --> length
+logLength([1, 2, 3]); // array --> length
+// logLength(10); // number --> X
+
