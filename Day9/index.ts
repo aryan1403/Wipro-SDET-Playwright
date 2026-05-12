@@ -101,7 +101,7 @@ function logLength<T extends HasLength>(arg: T): void { // T -> property .length
     console.log(arg.length);
 }
 
-logLength("Aaryan"); // string --> length
-logLength([1, 2, 3]); // array --> length
+logLength("Aaryan Kumar"); // string --> length
+logLength([1, 2, 3, 0]); // array --> length
 // logLength(10); // number --> X
 
