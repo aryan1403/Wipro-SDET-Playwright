@@ -18,7 +18,7 @@ const loginData = [
     username: "admin123", 
     password: "admin12345", 
     expected: "Invalid credentials"
-  },
+  }
 ]
 loginData.forEach(async data => {
   test(`Checking Login form with ${data.username}, ${data.password}`, async ({ page }) => {
