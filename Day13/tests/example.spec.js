@@ -1,5 +1,6 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
+import path from 'path';
 
 const loginData = [
   {
@@ -32,6 +33,9 @@ loginData.forEach(async data => {
     await username.fill(data.username);
     await password.fill(data.password);
     await btn.click();
+
+    // await btn.screenshot({ type: 'png', path: 'btn.png'  });
+    // await page.screenshot({ fullPage: true, path: 'full-page.png' })
     
     await expect(msg).toHaveText(data.expected);
   });
